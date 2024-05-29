@@ -13,6 +13,7 @@ class TestSender(unittest.TestCase):
         sender_instance = sender.Sender(('localhost', 12345))
         current_time = sender_instance.send_time()
 
+
         mock_sock_instance.sendto.assert_called_once()
         self.assertIn(current_time, time.ctime())
 
