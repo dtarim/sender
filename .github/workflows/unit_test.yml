@@ -1,0 +1,19 @@
+name: unit_test
+
+on:
+    workflow_dispatch:
+    push:
+      branches: [ "development", "master" ]
+    pull_request:
+      branches: [ "development", "master" ]
+
+jobs:
+    run_unit_test:
+        runs-on: python:3.9-slim
+    
+        steps:
+            - name: get-latest-code-of-branch
+              uses: actions/checkout@v3
+            
+            - name: run-python-unit-test
+              run: python -m unittest test_sender.py
