@@ -1,0 +1,1 @@
+This is sender project that sends data to reader.
