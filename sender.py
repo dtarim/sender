@@ -2,7 +2,7 @@ import socket
 import time
 
 def main():
-    server_address = ('localhost', 12345)
+    server_address = ('localhost', 30000)
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     try:
